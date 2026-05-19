@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>CBTA 44 - Oferta Educativa</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;700&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+    <h1>Centro de Bachillerato Tecnológico Agropecuario No. 44</h1>
+    <p>Oferta de Carreras Técnicas</p>
+</header>
+
+<main>
+
+<section class="inicio">
+    <h2>Bandeja de entrada</h2>
+    <p>
+   <div id="Logo"><img src=Imagenes/Logo.jpeg  align="left" width"40%" height"40%"></div>
+        El CBTA 44 ofrece formación integral a nivel medio superior, combinando conocimientos académicos con capacitación técnica especializada.
+        A continuación, puedes explorar las tres carreras técnicas disponibles:
+    </p>
+
+    <div class="botones">
+        <button onclick="mostrar('agro')">Técnico Agropecuario</button>
+        <button onclick="mostrar('soporte')">Técnico en Ofimatica</button>
+        <button onclick="mostrar('administracion')">Técnico en D.Comunitario</button>
+    </div>
+</section>
+
+<section id="agro" class="contenido oculto">
+    <h2>Técnico Agropecuario</h2>
+
+    <div id="agro"><img src=Imagenes/agro.jpeg width"40%" height"40%"></div>
+
+    <p>
+        La carrera de Técnico Agropecuario forma estudiantes capaces de desarrollar actividades relacionadas con la producción agrícola y pecuaria.
+        Se enfoca en el uso de técnicas modernas para el manejo sostenible de recursos naturales.
+    </p>
+
+    <h3>Áreas de formación:</h3>
+    <ul>
+        <li>Producción de cultivos</li>
+        <li>Manejo de ganado</li>
+        <li>Sistemas de riego</li>
+        <li>Conservación del suelo</li>
+    </ul>
+
+    <h3>Campo laboral:</h3>
+    <p>
+        Los egresados pueden trabajar en ranchos, empresas agrícolas, proyectos sustentables o continuar estudios superiores en agronomía.
+    </p>
+
+    <video width="500" height="280" controls>
+  <source src="videos/video 2.mp4" type="video/mp4">
+  Tu navegador no soporta el video.
+</video>
+
+    <button onclick="volver()">⬅ Regresar</button>
+</section>
+
+<!-- SOPORTE -->
+<section id="soporte" class="contenido oculto">
+    <h2>Tecnico en Ofimatica</h2>
+
+      <div id="tec"><img src=Imagenes/tec.jpeg width"40%" height"40%"></div>
+
+    <p>
+        Esta carrera capacita a los estudiantes en el diagnóstico, mantenimiento y reparación de equipos de cómputo, así como en la instalación de redes.
+    </p>
+
+    <h3>Áreas de formación:</h3>
+    <ul>
+        <li>Mantenimiento preventivo y correctivo</li>
+        <li>Redes informáticas</li>
+        <li>Sistemas operativos</li>
+        <li>Seguridad básica</li>
+    </ul>
+
+    <h3>Campo laboral:</h3>
+    <p>
+        Los egresados pueden trabajar en soporte técnico, empresas de tecnología o emprender su propio negocio de reparación.
+    </p>
+
+    <video width="500" height="280" controls>
+  <source src="videos/video 3.mp4" type="video/mp4">
+  Tu navegador no soporta el video.
+</video>
+
+    <button onclick="volver()">⬅ Regresar</button>
+</section>
+
+<section id="administracion" class="contenido oculto">
+    <h2>Técnico en D.Comunitario</h2>
+
+    <div id="com"><img src=Imagenes/com.jpeg width"40%" height"40%"></div>
+
+    <p>
+        La carrera de Técnico en D.Comunitario prepara a los estudiantes en la gestión de recursos, organización de empresas y toma de decisiones.
+    </p>
+
+    <h3>Áreas de formación:</h3>
+    <ul>
+        <li>Contabilidad básica</li>
+        <li>Recursos humanos</li>
+        <li>Mercadotecnia</li>
+        <li>Gestión empresarial</li>
+    </ul>
+
+    <h3>Campo laboral:</h3>
+    <p>
+        Los egresados pueden desempeñarse en oficinas, empresas, negocios propios o continuar estudios en administración o contaduría.
+    </p>
+
+    <video width="500" height="280" controls>
+  <source src="videos/video 1.mp4" type="video/mp4">
+  Tu navegador no soporta el video.
+</video>
+
+
+    <button onclick="volver()">⬅ Regresar</button>
+</section>
+
+</main>
+
+<footer>
+    <p>CBTA 44 © 2026 | Educación Técnica de Calidad</p>
+</footer>
+
+<script>
+function mostrar(seccion) {
+    document.querySelector('.inicio').style.display = 'none';
+    document.querySelectorAll('.contenido').forEach(sec => sec.classList.add('oculto'));
+    document.getElementById(seccion).classList.remove('oculto');
+}
+
+function volver() {
+    document.querySelector('.inicio').style.display = 'block';
+    document.querySelectorAll('.contenido').forEach(sec => sec.classList.add('oculto'));
+}
+</script>
+
+</body>
+</html>
